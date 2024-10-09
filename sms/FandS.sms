@@ -1,6 +1,6 @@
 // sf2: SGM 2.01 Yamaha Grandpiano + Gui + Bass
 
-H: FandS  bpm=105 ppqn=96 bar=4/4 dev=sf2
+H: FandS  bpm=105 ppqn=96 bar=4/4
 I: Cello  chn=1 bnk=0 prg=42 
 I: Harp   chn=2 bnk=0 prg=46
 I: Guitar chn=3 bnk=0 prg=25
