@@ -1,5 +1,4 @@
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 HIDCAM-SMS:	a simple music scripting (sms) language 
 			to generate midi file by ma.ke 2024-10-09
 			- without warranty
@@ -33,7 +32,6 @@ hold with next evt dur ¦ evt_          ¦      ¦       ¦                 ¦
 --------------------------------------------------------------------------------
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
 manual.sms   HIDCAM-SMS
 
 HIDCAM-SMS:	a simple music scripting (sms) language 
@@ -44,28 +42,27 @@ HIDCAM-SMS:	a simple music scripting (sms) language
             - be happy
 
 
-header command                   name is a file name too
+header command			name is a file name too
 -----------------------------------------------------------------------------
-H:		define header       	name bpm=x bar=x/x ppqn=x
+H: define header	name bpm=x bar=x/x ppqn=x
+       			name    name_of_song
+       			bpm     tempo in beats (quarter notes) per minute   
+                		default: 120 [30 - 240]   
+               			to redefine use it separatly outside of header command
+       			bar     bar, time signature                         
+                		default: 4/4 [2-8] / [2, 4, 8, 16, 32]
+                		to redefine use it separatly outside of header command
+       			ppqn    pulse per quarter note                      
+               			default: 96  [24, 48, 96, 192, 384, 768]
 
-        name    name_of_song
-        bpm     tempo in beats (quarter notes) per minute   
-                default: 120 [30 - 240]   
-                to redefine use it separatly outside of header command
-        bar     bar, time signature                         
-                default: 4/4 [2-8] / [2, 4, 8, 16, 32]
-                to redefine use it separatly outside of header command
-        ppqn    pulse per quarter note                      
-                default: 96  [24, 48, 96, 192, 384, 768]
 
-
-track instrument command        name is a new instrument track command
+track instrument command	name is a new instrument track command
 -----------------------------------------------------------------------------
-I:     	create inst track       name chn=x bnk=x prg=x drk=x
-                                     chn   default: 0   [0-(9=drum)-15]    
-                                     bnk   default: 0   [0-127, 128(drum bank)] 
-									 prg   default: 0   [0-127] sound patch
-									 key   default: 0   [0-127] default drum key
+I: create inst track	name chn=x bnk=x prg=x drk=x
+                        chn  	default: 0   [0-(9=drum)-15]    
+                        bnk   	default: 0   [0-127, 128(drum bank)] 
+			prg   	default: 0   [0-127] sound patch
+			key   	default: 0   [0-127] default drum key
 				
     hints
     - standard/default tracks called INST and DRUM, 
@@ -80,7 +77,7 @@ I:     	create inst track       name chn=x bnk=x prg=x drk=x
 (sub track) drum key command    name is a new drum key for DRUM track
 -----------------------------------------------------------------------------
 D:      create drum key         name key=x
-                                     key   	default: 31 [0-127] - drum key (sound)      
+                                key   default: 31 [0-127] - drum key (sound)      
 
     hints:
     - there is default drum track called DRUM (see track instrument command)
@@ -90,7 +87,7 @@ D:      create drum key         name key=x
 
 chord command                   name is a new chord**
 -----------------------------------------------------------------------------
-C:      create chord type	    name note0 ... note6
+C:      create chord type	name note0 ... note6
                                 noteX [0 .. 24]   0      main tone of chord
                                                   1-24   relative to main tone
 example:    C: maj  0 4 7
@@ -113,7 +110,7 @@ arpreggio command               name is a new arpreggio command**
 A:      arpreggio of chord:     name chord-note_list (position of note 
                                 defined in chord, begins with #0)
                                 optional shift octave, duration and
-								volume qualifier
+				volume qualifier
 
 C: maj 	 0 4 7
 A: arp | 0 1 2 0 |
@@ -130,42 +127,41 @@ note and there qualifier commands (all as one word, no separators!)
 -----------------------------------------------------------------------------
 notes: 
     c d e f g a b               - note value, optional with
-    nn								- octave [0-10] and/or
-    :								- base note flag define base note of 
-									  tabulature line (without qualifier!!!)
+    nn				- octave [0-10] and/or
+    :				- base note flag define base note of 
+				  tabulature line (without qualifier!!!)
     p -                         - pause / empty
     x o                         - beat on / off (only to use with drum key) 
-	0-24						- offset to basenote: 
-								  only to use in combination with base note
+    0-24			- offset to basenote:
+				  only to use in combination with base note
 
 qualifier:
- 	pitch       >               - pitch shift octave up
-     	        <               - pitch shift octave down
-         	    #               - pitch half tone up   (# sign)
-             	+               - pitch half tone up   (# sign)
-             	-               - pitch half tone down (b sign)
+ 	pitch   	>       - pitch shift octave up
+     	        	<       - pitch shift octave down
+         		#       - pitch half tone up   (# sign)
+             		+       - pitch half tone up   (# sign)
+             		-	- pitch half tone down (b sign)
 
- 	duration    /xx             - duration divisor of whole note time
+ 	duration	/xx     - duration divisor of whole note time
                                   xx: 1,2,4,8,16,32,64
-      	        .               - current duration +50%
-                _              	- hold duration and ends with next event duration
-                                  in same track
-                                - must be last qualifier symbol in event definition
+      	        	.       - current duration +50%
+               		_       - hold duration and ends with next event duration
+                                  in same track, must be last qualifier symbol 
+				  in event definition
 
- 	volume      !xxx            - volume
+ 	volume      	!xxx	- volume
                                   xx: 0-127 
 
 
 chord and there qualifier commands
 -----------------------------------------------------------------------------
 chord: 
-	C D E F G A B               - chord value, optional with
+	C D E F G A B		- chord value, optional with
 
 qualifier:
-	pitch       #               - pitch half tone up   (# sign)
-	octave     	nn				- octave [0-10]
-
-	ctype       name            - name of chord type 
+	pitch       	#	- pitch half tone up   (# sign)
+	octave     	nn	- octave [0-10]
+	ctype      	name    - name of chord type 
                                   mandatory information, e. g. Cmaj
 
 
@@ -189,7 +185,7 @@ miscellaneous commands
  comment1     //                - line comment, 
                                   after '//' all words are comments
                                   until end of line
- comment2     /* ... */			- block comment
+ comment2     /* ... */		- block comment
                                   after '/*' all words are comments
                                   until end of block comment '*/'
  bar          |                 - define start of new bar inside track, arpreggio, 
@@ -200,17 +196,12 @@ miscellaneous commands
                                   Am~arp1
  assign       =                 - assign value with parameter or midi controller
                                   assigned with value, e.g. @vol=127 or @007=127 
- multiplier	*[1-n]				- repeat last word n times 
+ multiplier	*[1-n]		- repeat last word n times 
                                   only note, chord or macro will be repeated
- time block   [                 - simultaneous play, block start 
-                                  (rest of line possible for comment)
-                 track/base note   - track / base note with list of 
-				...					 notes / offsets of base note, 
-                 ...                 chord~arpreggio, 
-                 ...                 midi controller
-                 track/base note  
-              ]                 - simultaneous play, block end 
-                                  (rest of line possible for comment)   
+ time block   [                 - simultaneous play, block start (rest of line comment)
+                 track		and list of notes, chord~arpreggio, midi controller
+		 base note      and list of offsets of base note, 
+              ]                 - simultaneous play, block end (rest of line comment)   
 
 
 general rules
@@ -257,15 +248,15 @@ general rules
 
 background: midi note numbers
 -----------------------------
-			┌──▄▄▄─▄▄▄──┬──▄▄▄─▄▄▄─▄▄▄──┐
-			│  ███ ███  │  ███ ███ ███  │
-			│  ███ ███  │  ███ ███ ███  │
-			│  ███ ███  │  ███ ███ ███  │
-			│	│	│	│	│	│	│	│
-note 		│ c │ d │ e │ f │ g │ a │ b │
-chord		│ C │ D │ E │ F │ G │ A │ B │
-			└───┴───┴───┴───┴───┴───┴───┘
-octave  0	   0   2   4   5   7   9  11 
+	    ┌──▄▄▄─▄▄▄──┬──▄▄▄─▄▄▄─▄▄▄──┐
+	    │  ███ ███  │  ███ ███ ███  │
+	    │  ███ ███  │  ███ ███ ███  │
+	    │  ███ ███  │  ███ ███ ███  │
+	    │	│   │	│   │	│   │	│
+note 	    │ c │ d │ e │ f │ g │ a │ b │
+chord	    │ C │ D │ E │ F │ G │ A │ B │
+	    └───┴───┴───┴───┴───┴───┴───┘
+octave  0      0   2   4   5   7   9  11 
 octave  1     12  14  16  17  19  21  23
 octave  2     24  26  28  29  31  33  35
 octave  3     36  38  40  41  43  45  47
