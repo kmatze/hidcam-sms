@@ -1,0 +1,103 @@
+// sf2: SGM 2.01 Yamaha Grandpiano + Gui + Bass
+
+H: FandS  bpm=105 ppqn=96 bar=4/4 dev=sf2
+I: Cello  chn=1 bnk=0 prg=42 
+I: Harp   chn=2 bnk=0 prg=46
+I: Guitar chn=3 bnk=0 prg=25
+I: Bass   chn=4 bnk=0 prg=32
+D: BD    key=36
+D: HH    key=37
+
+M: Part1 {
+ [ Takt 1
+  Bass    | p/4 c3/8 a< p e g a |
+  HH  | o   x       o   x   |
+      BD      | x   o       x   o   |
+ ]
+ [ Takt 2
+  Bass    | p/4 c3/8 a< p e a g# |
+  HH  | o   x       o   x    |
+      BD      | x   o       x   o    |
+ ]
+ [ Takt 3
+  Bass    | p/4 b2/8 g# p e a g# |
+  HH  | o   x       o   x    |
+      BD      | x   o       x   o    |
+ ]
+ [ Takt 4
+  Bass    | p/4 b2/8 g# p e g a  |
+  HH  | o   x       o   x    |
+      BD      | x   o       x   o    |
+ ]
+}
+
+M: Part2 {
+ [ Takt 1
+  Bass    | p/4 c3/8 a< p e g a   |
+  Harp  @vol=90  | p/8 a4 e a c> a< b @vol=120 ( a e c c> ) | 
+  HH  | o   x       o   x     |
+      BD      | x   o       x   o     |
+ ]
+ [ Takt 2
+  Bass    | p/4 c3/8 a< p e a g# |
+  Harp  @vol=90  | p/8 a4 e a c> a< g# @vol=120 ( e g# b g#< ) | 
+  HH  | o   x       o   x    |
+      BD      | x   o       x   o    |
+ ]
+ [ Takt 3
+  Bass    | p/4 b2/8 g# p e a g# |
+  Harp  @vol=90  | p/8 g4# e g# b g# a @vol=120 ( e g# b g#< ) | 
+  HH  | o   x       o   x    |
+      BD      | x   o       x   o    |
+ ]
+ [ Takt 4
+  Bass    | p/4 b2/8 g# p e g a  |
+  Harp  @vol=90  | p/8 g4# e g# b c> g< @vol=120 ( a e c c> ) | 
+  HH  | o   x       o/8   x x x/16 x   |
+      BD      | x   o       x   o    |
+ ]
+}
+
+M: Part3 {
+ Cello @vol=70
+ [ Takt 1
+  Bass    | p/4 c3/8 a< p e g a   |
+  Harp  @vol=90  | p/8 a4 e a c> a< b @vol=120 ( a e c c> ) | 
+  Cello  | a3/8 c> e/2. |
+  HH  | o/8 x  x  o o x o x   |
+      BD      | x   o       x   o     |
+ ]
+ [ Takt 2
+  Bass    | p/4 c3/8 a< p e a g# |
+  Harp  @vol=90  | p/8 a4 e a c> a< g# @vol=120 ( e g# b g#< ) |
+  Cello   | c4/4 ( b/2. b< ) |
+  HH  | o/8 x  x  o o x o x   |
+      BD      | x   o       x   o    |
+ ]
+ [ Takt 3
+  Bass    | p/4 b2/8 g# p e a g# |
+  Harp  @vol=90  | p/8 g4# e g# b g# a @vol=120 ( e g# b g#< ) | 
+  Cello   | d4/4 g#</2 p/8 b |
+  HH  | o/8 x  x  o o x o x   |
+      BD      | x   o       x   o    |
+ ]
+ [ Takt 4
+  Bass    | p/4 b2/8 g# p e g a  |
+  Harp  @vol=90  | p/8 g4# e g# b c> g< @vol=120 ( a e c c> ) |
+  Cello   | e4/2. p/8 ( e e< ) | 
+  HH  | o/8 x  x  o o x x x/16 x  |
+      BD      | x   o       x   o     |
+ ]
+}
+
+
+// Song
+
+Bass    | p p p/8 e2 g a |
+Part1
+Part2 
+Part3 *2
+bpm=90 bar=5/4
+
+a b - o p c d e f
+

@@ -1,0 +1,93 @@
+H: ma.ke. 	bar=3/4 drk=1
+I: Guitar 	prg=24 	chn=1
+I: Violine 	prg=43 	chn=1
+
+D: BD: key=35
+D: HH: key=37
+
+I: B    chn=4  bnk=0   prg=33
+D: AD    key=35
+D: RS    key=37
+
+A: test 0 p/2 
+
+Em~test Em
+
+bar=4/4
+
+c d e f
+
+Violine d e f | c a b c | 
+
+
+M: M1 {   
+ [  
+         | a/4 *3 c_ | p/2 f |
+         | d *2 d *2 | p/1   |
+ ] 
+} 
+    
+M1 *3
+
+
+
+M: Matze {
+  [ dies ist ein Test mit tab        
+     Guitar bar=3/4
+           | Em~test | Em~test
+      e5#: | - p o   | 0 
+      b4:  | - - 0   | - 0
+      g4:  | - 0 -   | - - 0
+      d4:  | - - -   |
+      a3:  | - - -   | 
+      e3:  | 0 - -   |
+ Violine   | d!50 e f   | a b c 
+ DRUM
+      BD:  | x o o   | x o o
+      HH:  | o x x   | o x x  
+   ]
+}
+
+Matze *2
+
+bar=4/4 	c d e | f g a | b c> |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

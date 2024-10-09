@@ -1,0 +1,352 @@
+H: JayDrubnitz		bpm=90 		ppqn=768 		bar=4/4
+I: MT				chn=0		bnk=0 			prg=60
+I: Klavier			chn=2 		bnk=0			prg=0
+I: JG				chn=3		bnk=0			prg=27
+I: B				chn=4		bnk=0			prg=33
+D: AD				key=35
+D: RS				key=37
+D: CH				key=42
+
+M: Einleitung.1 {
+[		1				2					3					4                                   > 
+	B  	| a2/1				| b 					| f 					| e/2 g# 									|
+	AD 	| x x o x 				| x x o x 					| x x o x 					| x x x x 									|
+	RS 	| o o x/8 x o o | o/4 o x/8 x o o 		| o/4 o x/8 x o o 		| o/4 x/8 x x x/16 x x x x x								|		
+]
+} 
+
+M: Einleitung.2 {
+[ 
+	Klavier @vol=85	| Am7 							| Em7 					| F6 					| E7 								|
+	B  				| a2/1				| b 					| f 					| e/2 g# 								|
+	AD 				| x x o x 				| x x o x					| x x o x 					| x x x x 								|
+	RS 				| o o x/8 x o o | o/4 o x/8 x o o			| o/4 o x/8 x o o 		| o/4 x/8 x x x/16 x x x x x 			|
+]
+} 
+
+M: Einleitung.3 {
+[
+	JG @vol=92 | a3/8 c> g/4 a/8< c> f#/4 | g/8< b e/4> g/8< b d/4> | f/8< a d/4> f/8< a c/4> | e/8< f e f e f e f |
+	Klavier @vol=92 | Am7 | Em7 | F6 | E7 |
+	B  | a2/1		| b | f | e/2 g# |
+	AD | x x o x | x x o x | x x o x | x x x x |
+	RS | o o x/8 x o o | o/4 o x/8 x o o | o/4 o x/8 x o o | o/4 x/8 x x x/16 x x x x x |
+]
+} 
+
+M: Einleitung.4 {
+[
+	MT | e/2. e/8 d | b/2< b/4 c> | f/2.< a/4 | e g# f> e |
+	JG @vol=85 | a3/8 c> g/4 a/8< c> f#/4 | g/8< b e/4> g/8< b d/4> | f/8< a d/4> f/8< a c/4> | e/8< f e f e f e f |
+	Klavier @vol=92 | Am7 | Em7 | F6 | E7 |
+	B  | a2/1		| b | f | e/2 g# |
+	AD | x x o x | x x o x | x x o x | x x x x |
+	RS | o o x/8 x o o | o/4 o x/8 x o o | o/4 o x/8 x o o | o/4 x/8 x x x/16 x x x x x |
+]
+} 
+
+M: Einleitung.5 {
+[ 
+	MT | a/2. c/4> | b/2< e/4> d | c#/2. d/8 d# | e/2 g# |
+	JG @vol=85 | a3/8 c> g/4 a/8< c> f#/4 | g/8< b e/4> g/8< b d/4> | f/8< a c#/4> f/8< a d/4> | e/8< f e f e f e f |
+	Klavier @vol=92 | Am7 | Em7 | Faug | E7 |
+	B  | a2/1		| b | f | e/2 g# |
+	AD | x x o x | x x o x | x x o x | x x x x |
+	RS | o o x/8 x o o | o/4 o x/8 x o o | o/4 o x/8 x o o | o/4 x/8 x x x/16 x x x x x |
+]
+} 
+
+M: Uebergang {
+	[
+		MT | a6/1               |
+		B  | a2 a a e/8 g      |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+	
+		B  | a2 a a a/8 c>     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+	
+		B  | e2 e e d/8 d#     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+	
+		B  | e2 e e e/8 g                |
+		AD | x x x x                     |
+		CH | o/8 x o x o x o x 								 |
+		RS | o/4. x/16 x x x x x x x x x |
+	]
+}
+
+M: MainPart1 {
+	[
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+		B  | a2 a a e/8 g      |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+		B  | a2 a a a/8 c>     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		JG | p/4 e p e   |
+		JG | p/4 b p b   |
+		JG | p/4 g# p g# |	
+		B  | e2 e e d/8 d#     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		JG | e e e d    | 
+		JG | b b b b    |
+		JG | g# g# g# e |
+		B  | e2 e e e/8 g                |
+		AD | x x x x                     |
+		CH | o/8 x o x o x o x 								 |
+		RS | o/4. x/16 x x x x x x x x x |
+	]
+}
+
+M: MainPart2 {
+	[
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+   		B  | a2 a a e/8 g      |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+		B  | a2 a a a/8 c>     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		JG | p/4 e p e   |
+		JG | p/4 b p b   |
+		JG | p/4 g# p g# |
+   Klavier | p/8 e4 p e p e p d# |
+   Klavier | p/8 e3 p e p e p g# |
+   Klavier | e2/2                |
+		B  | e2 e e d/8 d#     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		JG | e e e d    | 
+		JG | b b b b    |
+		JG | g# g# g# e |
+   Klavier | p/8 e4 p p e d> c b<                     |
+   Klavier | p/8 e3 p p e4 b a e                      |
+   Klavier | e2/8 e> e< e> e/16< e> e< e> e< e> e< e> |
+		B  | e2 e e e/8 g                |
+		AD | x x x x                     |
+		CH | o/8 x o x o x o x 								 |
+		RS | o/4. x/16 x x x x x x x x x |
+	]
+}
+
+M: MainPart3 {
+	[
+		MT | p/2 p/8 a6 p p |
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+   		B  | a2 a a e/8 g      |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | p/2 p/8 a6 p e |
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+		B  | a2 a a a/8 c>     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | p/2 p/8 e6 p p |
+		JG | p/4 e p e   |
+		JG | p/4 b p b   |
+		JG | p/4 g# p g# |
+   Klavier | p/8 e4 p e p e p d# |
+   Klavier | p/8 e3 p e p e p g# |
+   Klavier | e2/2                |
+		B  | e2 e e d/8 d#     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | p/2 p/8 e6 p b | 
+		JG | e e e d    | 
+		JG | b b b b    |
+		JG | g# g# g# e |
+   Klavier | p/8 e4 p p e d> c b<                     |
+   Klavier | p/8 e3 p p e4 b a e                      |
+   Klavier | e2/8 e> e< e> e/16< e> e< e> e< e> e< e> |
+		B  | e2 e e e/8 g                |
+		AD | x x x x                     |
+		CH | o/8 x o x o x o x 								 |
+		RS | o/4. x/16 x x x x x x x x x |
+	]
+}
+
+M: MainPart4 {
+	[
+		MT | p/2 p/8 a6 p p |
+		MT | p/2 p/8 e6 p p |
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+   		B  | a2 a a e/8 g      |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | p/2 p/8 a6 p e |
+		MT | p/2 p/8 e6 p c |
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+		B  | a2 a a a/8 c>     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | p/2 p/8 e6 p p  |
+		MT | p/2 p/8 b5 p p |
+		JG | p/4 e p e   |
+		JG | p/4 b p b   |
+		JG | p/4 g# p g# |
+   Klavier | p/8 e4 p e p e p d# |
+   Klavier | p/8 e3 p e p e p g# |
+   Klavier | e2/2                |
+		B  | e2 e e d/8 d#     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | p/2 p/8 b6/4. |
+		MT | p/2 p/8 e6/4. |
+		JG | e e e d    | 
+		JG | b b b b    |
+		JG | g# g# g# e |
+   Klavier | p/8 e4 p p e d> c b<                     |
+   Klavier | p/8 e3 p p e4 b a e                      |
+   Klavier | e2/8 e> e< e> e/16< e> e< e> e< e> e< e> |
+		B  | e2 e e e/8 g                |
+		AD | x x x x                     |
+		CH | o/8 x o x o x o x 								 |
+		RS | o/4. x/16 x x x x x x x x x |
+	]
+}
+
+M: MainPart5 {
+	[
+		MT | a5/4. e/8>     |
+		MT | p/2 p/8 a6 p p |
+		MT | p/2 p/8 e6 p p |
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+   		B  | a2 a a e/8 g      |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | e6/4. a/8<     |
+		MT | p/2 p/8 a6 p e |
+		MT | p/2 p/8 e6 p c |
+		JG | p/4 e p e |
+		JG | p/4 c p c |
+		JG | p/4 a p a |
+   Klavier | p/8 a3 p a p a p g  |
+   Klavier | p/8 a2 p a p a p e> |
+   Klavier | a1/2                |
+		B  | a2 a a a/8 c>     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | g5#/4. e/8>    |
+		MT | p/2 p/8 e6 p p |
+		MT | p/2 p/8 b5 p p |
+		JG | p/4 e p e   |
+		JG | p/4 b p b   |
+		JG | p/4 g# p g# |
+   Klavier | p/8 e4 p e p e p d# |
+   Klavier | p/8 e3 p e p e p g# |
+   Klavier | e2/2                |
+		B  | e2 e e d/8 d#     |
+		AD | x x x x           |
+		CH | o/8 x o x o x o x |
+	]
+	[
+		MT | e6/2. d/4     |
+		MT | p/2 p/8 b6/4. |
+		MT | p/2 p/8 e6/4. |
+		JG | e e e d    | 
+		JG | b b b b    |
+		JG | g# g# g# e |
+   Klavier | p/8 e4 p p e d> c b<                     |
+   Klavier | p/8 e3 p p e4 b a e                      |
+   Klavier | e2/8 e> e< e> e/16< e> e< e> e< e> e< e> |
+		B  | e2 e e e/8 g                |
+		AD | x x x x                     |
+		CH | o/8 x o x o x o x 								 |
+		RS | o/4. x/16 x x x x x x x x x |
+	]
+}
+
+
+ | p | 
+ Einleitung.1
+ Einleitung.2 
+ Einleitung.3
+ Einleitung.3 
+ Einleitung.4
+ Einleitung.5
+ Uebergang
+ MainPart1
+ MainPart2
+ MainPart3
+ MainPart4
+ MainPart5
