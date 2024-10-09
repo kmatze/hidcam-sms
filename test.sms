@@ -1,0 +1,22 @@
+// simple music script example
+// -----------------------------------------------------------------------------
+// 
+// header define
+// -----------------------------------------------------------------------------
+H:  Name_of_Song bpm=120 ppqn=96 bar=4/4
+
+// track define
+// -----------------------------------------------------------------------------
+I: Piano    chn=0 bnk=0 prg=3
+I: Guitar   chn=0 bnk=0 prg=87
+D: HH:      key=42
+
+M: testmacro {
+   [
+	   Piano   @vol=50 | a b c d | e f g b |
+	   Guitar  @vol=50 | a/1     | c/1     |
+	   HH:             | x o x o | o x x x |
+   ]
+}
+
+testmacro *2
