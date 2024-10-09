@@ -1,13 +1,13 @@
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-**HIDCAM-SMS:**	a simple music scripting (sms) language 
+HIDCAM-SMS:	a simple music scripting (sms) language 
 			to generate midi file by ma.ke 2024-10-09
 			- without warranty
 			- use it on your own risk
             - do what ever you want with this
             - be happy
 			
-**ONE-PAGER HELP**  >>>> for more in-depth information read file smsManual.sms  <<<<
+ONE-PAGER HELP  >>>> for more in-depth information read file smsManual.sms  <<<<
 commands and parameter for HIDCAM's simple music scripting language (HIDCAM-SMS)
 --------------------------------------------------------------------------------
 define header           H: name bpm=x ppqn=x bar=x/x
@@ -34,7 +34,7 @@ hold with next evt dur ¦ evt_          ¦      ¦       ¦                 ¦
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-**manual.sms   HIDCAM-SMS
+manual.sms   HIDCAM-SMS
 
 HIDCAM-SMS:	a simple music scripting (sms) language 
 			to generate midi file by ma.ke 2024-10-09
@@ -44,7 +44,7 @@ HIDCAM-SMS:	a simple music scripting (sms) language
             - be happy
 
 
-**header command                   name is a file name too
+header command                   name is a file name too
 -----------------------------------------------------------------------------
 H:		define header       	name bpm=x bar=x/x ppqn=x
 
@@ -59,7 +59,7 @@ H:		define header       	name bpm=x bar=x/x ppqn=x
                 default: 96  [24, 48, 96, 192, 384, 768]
 
 
-**track instrument command        name is a new instrument track command
+track instrument command        name is a new instrument track command
 -----------------------------------------------------------------------------
 I:     	create inst track       name chn=x bnk=x prg=x drk=x
                                      chn   default: 0   [0-(9=drum)-15]    
@@ -77,7 +77,7 @@ I:     	create inst track       name chn=x bnk=x prg=x drk=x
     - tracks with same MIDI channel in a time block may be play cacophonically
 
 
-**(sub track) drum key command    name is a new drum key for DRUM track
+(sub track) drum key command    name is a new drum key for DRUM track
 -----------------------------------------------------------------------------
 D:      create drum key         name key=x
                                      key   	default: 31 [0-127] - drum key (sound)      
@@ -88,7 +88,7 @@ D:      create drum key         name key=x
     - standard/default drum key called TICK: (drk=31)
                                             
 
-**chord command                   name is a new chord**
+chord command                   name is a new chord**
 -----------------------------------------------------------------------------
 C:      create chord type	    name note0 ... note6
                                 noteX [0 .. 24]   0      main tone of chord
@@ -108,7 +108,7 @@ example:    C: maj  0 4 7
 		- chord uses without arp: play tones as 1/1 notes at same time (like as time group)
 
 
-**arpreggio command               name is a new arpreggio command**
+arpreggio command               name is a new arpreggio command**
 -----------------------------------------------------------------------------
 A:      arpreggio of chord:     name chord-note_list (position of note 
                                 defined in chord, begins with #0)
@@ -120,13 +120,13 @@ A: arp | 0 1 2 0 |
 useage in composition: Cmaj~arp
 
 
-**macro commands                  name is a new user command**
+macro commands                  name is a new user command**
 -----------------------------------------------------------------------------
 M:      macro                   name { ... }
                                 all things except macros and commands
 
 
-**note and there qualifier commands (all as one word, no separators!)
+note and there qualifier commands (all as one word, no separators!)
 -----------------------------------------------------------------------------
 notes: 
     c d e f g a b               - note value, optional with
@@ -156,7 +156,7 @@ qualifier:
                                   xx: 0-127 
 
 
-**chord and there qualifier commands
+chord and there qualifier commands
 -----------------------------------------------------------------------------
 chord: 
 	C D E F G A B               - chord value, optional with
@@ -169,7 +169,7 @@ qualifier:
                                   mandatory information, e. g. Cmaj
 
 
-**midi controller commands for midi channel (track)
+midi controller commands for midi channel (track)
 -----------------------------------------------------------------------------
     predefined @... standard controller:
     -------------------------------------------
@@ -184,7 +184,7 @@ qualifier:
                                  xxx: 0-127  ->  value
 
 
-**miscellaneous commands 
+miscellaneous commands 
 ----------------------------------------------------------------------
  comment1     //                - line comment, 
                                   after '//' all words are comments
@@ -213,7 +213,7 @@ qualifier:
                                   (rest of line possible for comment)   
 
 
-**general rules
+general rules
 -----------------------------------------------------------------------------
  - empty lines are allowed
  - comments for 
@@ -255,7 +255,7 @@ qualifier:
  - all tracks will be compiled to a midi file type 1
 
 
-**background: midi note numbers
+background: midi note numbers
 -----------------------------
 			┌──▄▄▄─▄▄▄──┬──▄▄▄─▄▄▄─▄▄▄──┐
 			│  ███ ███  │  ███ ███ ███  │
